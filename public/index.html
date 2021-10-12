@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div>
+        <h1 class="">Carga de productos</h1>
+        <div class="container-sm"> 
+        <form action="http://localhost:8080/api/productos/carga"  method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="title" class="form-label">Nombre del producto</label>
+              <input type="text" class="form-control" id="title" aria-describedby="emailHelp" name="title" required>
+    
+            </div>
+            <div class="mb-3">
+              <label for="number" class="form-label">Ingrese el precio del producto</label>
+              <input type="number" class="form-control" id="price" name="price" required>
+            </div>
+            <div class="mb-3 form-check">
+                <label>Imagen del producto</label>
+                <input type="file" id="thumbnail" name="thumbnail"> 
+                
+            </div>
+    
+            <input type="submit" value="Enviar" class="btn btn-primary">
+          </form>
+        </div>
+
+    </div>
+
+
+    <div>
+    <h1>Sala de chat <i class="fas fa-sms"></i></h1>
+    <div class="container1">
+    <div>
+    <p>Usuarios conectados</p>
+    <div id="users">
+
+    </div>
+    </div>
+
+    <div class="container2">
+    <div id="messages"></div>
+    <div id="actions">
+        
+    </div>
+    <form>
+        <input type="text" id="username" placeholder="Usuario" required>
+        <input class="texto" type="text" id="text" placeholder="Chat" required>
+        <input type="submit">
+    </form>
+    </div >
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

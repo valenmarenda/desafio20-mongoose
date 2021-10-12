@@ -1,0 +1,7 @@
+
+// error en app.js  no funciona
+// como conecto mensajes y productos a la base de datos?
+// se puede eliminar/ editar los productos directo desde la vista?
+// como cargo imagenes a mongo?
+// como se ordenan las carpetas
+// pasar a react js
